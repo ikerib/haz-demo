@@ -49,13 +49,22 @@
 
     <div class="container">
       <div class="row">&nbsp;</div>
+      <div class="col-md-12">
+        <div class="col-md-1">
+            <a href="#" id="btnTramitazioaHasi" class="btn btn-primary">Tramitazio berria</a>
+        </div>
+        <div class="col-md-9"></div>
+        <div class="col-md-2">
+            <a href="#" id="btnTramitazioaFin" class="btn btn-success">Amaitu tramitazioa</a>
+        </div>
+      </div>
       <div class="row">&nbsp;</div>
       <div class="row">&nbsp;</div>
       <form action="">
 
         <!-- CANAL -->
 
-        <div class="row">
+        <div class="row rowCanal">
           <div class="col-md-2">
             <label class="radio-inline">
               <strong>Canal</strong>
@@ -76,7 +85,7 @@
 
         <!-- REMITENTE -->
      
-        <div class="row">
+        <div class="row rowRemitente">
           <div class="col-md-2">
             <label class="radio-inline">
               <strong>Remitente</strong>
@@ -94,7 +103,7 @@
   
         <!-- GENERO -->
 
-        <div class="row divPersona">
+        <div class="row rowPersona">
             <div class="col-md-2">
               <label class="radio-inline">
                 <strong>Genero</strong>
@@ -112,7 +121,7 @@
     
           <!-- EDAD -->
 
-          <div class="row divPersona">
+          <div class="row rowEdad">
               <div class="col-md-2">
                 <label class="radio-inline">
                   <strong>Rango edad</strong>
@@ -133,7 +142,7 @@
       
             <!-- NACIONALIDAD -->
 
-            <div class="row divPersona">
+            <div class="row rowNacionalidad">
                 <div class="col-md-2">
                   <label class="radio-inline">
                     <strong>Nacionalidad</strong>
@@ -151,7 +160,7 @@
         
               <!-- IDIOMA -->
 
-              <div class="row">
+              <div class="row rowIdioma">
                   <div class="col-md-2">
                     <label class="radio-inline">
                       <strong>Idioma</strong>
@@ -172,7 +181,7 @@
           
                 <!-- DISTRITO -->
 
-                <div class="row">
+                <div class="row rowDistrito">
                   <div class="col-md-2">
                     <label class="radio-inline">
                       <strong>Distrito</strong>
@@ -196,7 +205,7 @@
 
                 <!-- ADMINISTRACION -->
             
-                <div class="row">
+                <div class="row rowAdministracion">
                   <div class="col-md-2">
                     <label class="radio-inline">
                       <strong>Administración</strong>
@@ -204,29 +213,31 @@
                   </div>
                   <div class="col-md-10">  
                     <label class="radio-inline">
-                      <input type="radio" name="optDistrito">Municipal
+                      <input type="radio" name="optAdministracion">Municipal
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="optDistrito">Provincial
+                      <input type="radio" name="optAdministracion">Provincial
                     </label>                              
                     <label class="radio-inline">
-                        <input type="radio" name="optDistrito">Autonomica
+                        <input type="radio" name="optAdministracion">Autonomica
                     </label>                              
                     <label class="radio-inline">
-                        <input type="radio" name="optDistrito">Estatal
+                        <input type="radio" name="optAdministracion">Estatal
                     </label>                              
                     <label class="radio-inline">
-                      <input type="radio" name="optDistrito">Justicia
+                      <input type="radio" name="optAdministracion">Justicia
                   </label>                              
                   <label class="radio-inline">
-                    <input type="radio" name="optDistrito">Osakidetza
+                    <input type="radio" name="optAdministracion">Osakidetza
                 </label>                              
                   </div>              
                 </div>
 
                 <br>
 
-                <div class="row">
+                <!-- TRAMITEAK -->
+
+                <div class="row rowTramiteak">
                   <div class="col-md-1"></div>
                   <div class="col-md-11">
                     <!-- Single button -->
@@ -235,39 +246,74 @@
                           Nuevo tramite <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a href="#">Action</a></li>
-                          <li><a href="#">Another action</a></li>
-                          <li><a href="#">Something else here</a></li>
+                          <li><a class="btnModal" href="#">Zerbikat</a></li>
+                          <li><a class="btnModal" href="#">Another action</a></li>
+                          <li><a class="btnModal" href="#">Something else here</a></li>
                           <li role="separator" class="divider"></li>
-                          <li><a href="#">Separated link</a></li>
+                          <li><a class="btnModal" href="#">Separated link</a></li>
                         </ul>
                       </div>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row rowTramiteak rowTramiteakTable">
                   <div class="col-md-1">&nbsp;</div>
                   <div class="col-md-8">
-                    <table class="table table-bordered table-condensed">
+                    <table id="nireTable" class="table table-bordered table-condensed">
                       <thead>
                         <th>Nº</th>
                         <th>Tramite</th>
                         <th></th>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>1ª</td>
-                          <td>Errolda eskaria</td>
-                          <td><a href="#"><i class="glyphicon glyphicon-trash"></i></a></td>
-                        </tr>
+                        
                       </tbody>
                     </table>
                   </div>
                   <div class="col-md-3"></div>
                 </div>
-
+                <div class="row">&nbsp;</div>
+                <div class="row rowTramiteak">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8">
+                    <label for="">Oharrak</label>
+                      <textarea class="form-control" rows="3"></textarea>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
       </form>
       
       
+
+      <div class="modal fade" id="nireModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Zerbikat</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+
+                  <div class="col-md-6">
+                      <select id="cmbselect1" multiple class="form-control" size="10" >
+                        <option value="0">Erabilienak</option>
+                        <option value="1">Izapide Arruntak</option>
+                        <option value="2">Ongizatea</option>
+                      </select>
+                  </div>
+                  <div class="col-md-6">
+                      <select id="cmbselect2" multiple class="form-control" size="10">
+                      </select>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Ezeztatu</button>
+                <button type="button" id="cmdGorde" class="btn btn-primary">Gorde</button>
+              </div>
+            </div>
+          </div>
+        </div>  
       
     </div> <!-- /container -->        
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
