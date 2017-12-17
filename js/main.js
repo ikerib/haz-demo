@@ -100,5 +100,21 @@ $(document).ready(function(){
         $('#nireModal').modal('hide')
     });
 
+    $('#btnGerkud').click(function(){
+        var mitr = '<tr><td>4</td>';
+        mitr = mitr + '<td>Geskud inzidentzia</td>';
+        mitr = mitr + '<td><a class="btnEzabatu" href="#"><i class="glyphicon glyphicon-trash"></i></a></td>';
+        $('#nireTable').append(mitr);
+    })
 
+    $('#btnInformacion').click(function(){
+        var mitr = '<tr><td>3</td>';
+        mitr = mitr + '<td>Petición información</td>';
+        mitr = mitr + '<td><a class="btnEzabatu" href="#"><i class="glyphicon glyphicon-trash"></i></a></td>';
+        $('#nireTable').append(mitr);
+    })
+
+    $(document).on('click', '.btnEzabatu', function(){
+        $(this).parents("tr").remove();
+    })
 })
