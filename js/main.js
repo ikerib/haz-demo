@@ -93,16 +93,20 @@ $(document).ready(function(){
     });
 
     $('#cmdGorde').click(function(){
+        
         var mitr = '<tr><td>2</td><td>';
         mitr = mitr + $('#cmbselect2').val() + '</td>';
+        mitr = mitr + '<td><label><input type="radio">Solucionado</label>&nbsp;&nbsp;<label><input type="radio">Redirigido</label>&nbsp;&nbsp;<label><input type="radio">Cancelado</label></td>';
         mitr = mitr + '<td><a class="btnEzabatu" href="#"><i class="glyphicon glyphicon-trash"></i></a></td>';
         $('#nireTable').append(mitr);
         $('#nireModal').modal('hide')
     });
 
     $('#btnGerkud').click(function(){
+        console.log("JAJAJ")
         var mitr = '<tr><td>4</td>';
         mitr = mitr + '<td>Geskud inzidentzia</td>';
+        mitr = mitr + '<td><label><input type="radio">Solucionado</label>&nbsp;&nbsp;<label><input type="radio">Redirigido</label>&nbsp;&nbsp;<label><input type="radio">Cancelado</label></td>';
         mitr = mitr + '<td><a class="btnEzabatu" href="#"><i class="glyphicon glyphicon-trash"></i></a></td>';
         $('#nireTable').append(mitr);
     })
@@ -110,6 +114,7 @@ $(document).ready(function(){
     $('#btnInformacion').click(function(){
         var mitr = '<tr><td>3</td>';
         mitr = mitr + '<td>Petición información</td>';
+        mitr = mitr + '<td><label><input type="radio">Solucionado</label>&nbsp;&nbsp;<label><input type="radio">Redirigido</label>&nbsp;&nbsp;<label><input type="radio">Cancelado</label></td>';
         mitr = mitr + '<td><a class="btnEzabatu" href="#"><i class="glyphicon glyphicon-trash"></i></a></td>';
         $('#nireTable').append(mitr);
     })
