@@ -24,14 +24,14 @@ $(document).ready(function(){
     $('#btnTramitazioaHasi').click(function(){
         $('#btnTramitazioaFin').show()
         $('.rowCanal').show()
-        $('.rowRemitente').hide()
-        $('.rowPersona').hide()
-        $('.rowEdad').hide()
-        $('.rowNacionalidad').hide()
-        $('.rowIdioma').hide()
-        $('.rowDistrito').hide()
-        $('.rowAdministracion').hide()
-        $('.rowTramiteak').hide()
+        $('.rowRemitente').show()
+        $('.rowPersona').show()
+        $('.rowEdad').show()
+        $('.rowNacionalidad').show()
+        $('.rowIdioma').show()
+        $('.rowDistrito').show()
+        $('.rowAdministracion').show()
+        $('.rowTramiteak').show()
         $('#btnTramitazioaHasi').hide();
     });
     
