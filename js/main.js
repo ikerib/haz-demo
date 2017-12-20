@@ -24,6 +24,14 @@ $(document).ready(function(){
     $('#btnTramitazioaHasi').click(function(){
         $('#btnTramitazioaFin').show()
         $('.rowCanal').show()
+        $('.rowRemitente').hide()
+        $('.rowPersona').hide()
+        $('.rowEdad').hide()
+        $('.rowNacionalidad').hide()
+        $('.rowIdioma').hide()
+        $('.rowDistrito').hide()
+        $('.rowAdministracion').hide()
+        $('.rowTramiteak').hide()
         $('#btnTramitazioaHasi').hide();
     });
     
